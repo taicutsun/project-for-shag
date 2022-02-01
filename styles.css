@@ -1,0 +1,52 @@
+img{
+    width: 200px;
+    height: 400px;  
+    display: block;
+}
+div{
+display: block;
+}
+
+/*for menu start anhd game*/
+.first{
+display: block;
+}
+
+
+.sec{
+display: none;
+}
+
+
+/*for menu start anhd game*/
+
+.center{
+margin-left: 50%;
+color:green;
+}
+
+.butt{
+background-color: whitesmoke;
+width: 500px;
+height: 100px;
+border-color: gray;
+}
+
+.forbutt{
+background-color: green;
+width: 500px;
+height: 100px;
+border-color: gray;
+}
+
+.bl{
+display: inline-block;
+}
+
+
+
+#res{
+background-color: red;
+width: 50px;
+height: 20px;
+}
