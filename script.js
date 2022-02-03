@@ -53,6 +53,7 @@ console.log(`c=${c}`);
 
 };
 
+
 function statusCheck(a,b){
 if(a==true && b==true){
     start.style.display="none";
@@ -62,11 +63,33 @@ return true;
 }
 }
 
-start.onclick= function(){//button start
+async function ch(cot,coth,ctt){
+
+if(cot==true ){
+state.muh=true;state.prish=true;state.voin=false;
+console.log(state);
+return state;
+}
+if(coth==true){
+state.muh=true;state.prish=false;state.voin=true;
+console.log(state);
+return state;
+}
+if(ctt==true ){
+state.muh=false;state.prish=true;state.voin=true;
+//console.log(state);
+return state;
+}
+
+}
+
+start.onclick= function prom(){//button start
 let ot=statusCheck(one,two);//1 play w 2
 let oth=statusCheck(one,thre);//1 play w 3
 let tt=statusCheck(thre,two);// 2 play w 3
-if(ot==true){
+ch(ot,oth,tt).then(ren());
+//let wait=await ch(ot,oth,tt);
+/*if(ot==true){
 state.muh=true;state.prish=true;state.voin=false;
 console.log(state);
 return state;
@@ -78,7 +101,8 @@ return state;
 }
 if(tt==true){
 state.muh=false;state.prish=true;state.voin=true;
-console.log(state);
+//console.log(state);
 return state;
-}
+}*/
 };
+

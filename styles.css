@@ -27,14 +27,14 @@ color:green;
 
 .butt{
 background-color: whitesmoke;
-width: 500px;
+width: 600px;
 height: 100px;
 border-color: gray;
 }
 
 .forbutt{
 background-color: green;
-width: 500px;
+width: 600px;
 height: 100px;
 border-color: gray;
 }
@@ -43,10 +43,27 @@ border-color: gray;
 display: inline-block;
 }
 
-
-
 #res{
 background-color: red;
 width: 50px;
 height: 20px;
+}
+
+/*for second part buttons*/
+.buttS{
+background-color: whitesmoke;
+width: 200px;
+height: 100px;
+border-color: gray;
+}
+.forbuttS{
+background-color: green;
+width: 200px;
+height: 100px;
+border-color: gray;
+}
+/*for second part buttons*/
+
+.del{
+width: 200px;
 }
