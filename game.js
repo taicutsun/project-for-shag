@@ -2,9 +2,7 @@ let res=document.getElementById("res");
 let playerf=document.getElementById("playerf");
 let players=document.getElementById("players"); 
 
-
-
-res.onclick= function(){//button reset game
+function reset(){//button reset game
     //res.style.display="none";
 start.style.display="block";
 fc.style.display="block";
@@ -27,23 +25,18 @@ one=false;a=1;
 two=false;b=1;
 thre=false;c=1;
 state.muh=false;state.prish=false;state.voin=false;
+
+Muhamed.hp=20;Prishelec.hp=10;Voin.hp=25;
+Muhamed.t=0;Prishelec.t=0;Voin.t=0;
+
+fU=0;sU=0;
 }
-
-
-
 
 //help func
 function addClass(f,s){//for adding class to buttons
 f.classList.add("buttS");f.classList.add("del");
 s.classList.add("buttS");s.classList.add("del");
 }
-
-/*
-function checkPerson(){
-if(state.muh==true && state.prish==true){ Muhamed.st=true;Prishelec.st=true; }
-else if(state.muh==true && state.voin==true){ Muhamed.st=true;Voin.st=true; }
-else if(state.prish==true && state.voin==true){ Prishelec.st=true;Voin.st=true; }
-}*/
 
 function checkPersonU(personF,personS){//checking who playing for ult button
 if(personF == state.muh && personS==state.prish){
@@ -90,13 +83,13 @@ checkPersonU(a,b);//added ult button
 }
 
 function helpRen(r,a,b,stringf,strings){
-if(a==true && b==true){
+if(a==true && b==true){//checking who is playing
 
 if(r>1){//if its second game
- let todel=document.getElementsByClassName("del");console.log(todel);//img
+ let todel=document.getElementsByClassName("del");console.log(todel);//rerendering img
  for(let i=0;i<todel.length;i++){todel[i].style.display="none";}
 
- let todelB=document.getElementsByClassName("del");console.log(todelB);//butt
+ let todelB=document.getElementsByClassName("del");console.log(todelB);//rerendering butt
  for(let i=0;i<todelB.length;i++){todelB[i].style.display="none";}
 
 helpforhelp(stringf,strings,a,b);
@@ -133,9 +126,9 @@ else{//its first game
 
 let r=0;
 function ren(){//using helpren w/diff props
-r++;console.log(`r=${r}`);//to check what game it is(first or second and else..)
-helpRen(r,state.muh,state.prish,"pics/muh.jpg","pics/prish.jpg")
-helpRen(r,state.muh,state.voin,"pics/muh.jpg","pics/voin.jpg")
-helpRen(r,state.prish,state.voin,"pics/prish.jpg","pics/voin.jpg")
+r++;console.log(`r=${r}`);//to check what game it is(first or second and else...)
+helpRen(r,state.muh,state.prish,"pics/muh.jpg","pics/prish.jpg")//if muh play w prish
+helpRen(r,state.muh,state.voin,"pics/muh.jpg","pics/voin.jpg")//if muh play w voin
+helpRen(r,state.prish,state.voin,"pics/prish.jpg","pics/voin.jpg")//if voin play w prish
 
 }

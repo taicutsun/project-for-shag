@@ -1,156 +1,126 @@
-let nt=0;let np=0;let nl=0;//for picking only one button first person
-let snt=0;let snp=0;let snl=0;//for picking only one button second person
-
 //for buttons handlers
 //buttons for first player "Ffunc"
-function FclickA(button){//for event handler on button attack
+function FclickA(button){//for event handler on button attack first player 
 
-if(np>=1 || nl>=1 || snt>=1 || snp>=1 || snl>=1){console.log("have chosen 1");}
-else {
-nt++;
-console.log(`nt=${nt}`);
-if(nt>1){nt=0}
-
-button.classList.toggle('buttS');
-button.classList.toggle('forbuttS');
-
-if(state.muh==true && state.prish==true){
-//setTimeout("alert('Привет')",1000);
+if(state.muh==true && state.prish==true){//chicking who playing
+  fight(Prishelec,Muhamed.at,"muhamed","prishelec",button); 
   }  
 else if(state.muh==true && state.voin==true){
-
+  fight(Voin,Muhamed.at,"muhamed","voin",button); 
   }
 else if(state.prish==true && state.voin==true){ 
-
+  fight(Voin,Prishelec.at,"prishelec","voin",button); 
   }
 
-    }
+    
 };
 
-function FclickH(button){//for event handler on button heal
+function FclickH(button){//for event handler on button heal first player
 
-if(nt>=1 || nl>=1 || snt>=1 || snp>=1 || snl>=1){console.log("have chosen 1")}
-else{
-np++;
- console.log(`np=${np}`);
- if(np>1){np=0}
-
-button.classList.toggle('buttS');
-button.classList.toggle('forbuttS');
-
-if(state.muh==true && state.prish==true){
-
+if(state.muh==true && state.prish==true){//chicking who playing
+  heal(Muhamed,Muhamed.hp,"muhamed");
   }  
 else if(state.muh==true && state.voin==true){
-
+  heal(Muhamed,Muhamed.hp,"muhamed");
   }
 else if(state.prish==true && state.voin==true){ 
- 
+  heal(Prishelec,Prishelec.hp,"prishelec");
   }
 
-    }
 };
 
-function FclickU(button){//for event handler on button ult
+function FclickU(button){//for event handler on button ult first player
 
-if(nt>=1 || np>=1 || snt>=1 || snp>=1 || snl>=1){console.log("have chosen 1")}
-else{  
- nl++;
- console.log(`nl=${nl}`);
- if(nl>1){nl=0}
- 
-
-button.classList.toggle('buttS');
-button.classList.toggle('forbuttS');
-
-if(state.muh==true && state.prish==true){
- 
+if(state.muh==true && state.prish==true){//chicking who playing
+  alert("ALAX KAK BAR ");
+  ult(Prishelec,Muhamed.ul,"muhamed","prishelec",button,fU); fU++;
   }  
 else if(state.muh==true && state.voin==true){
-
+  alert("ALAX KAK BAR ");
+  ult(Voin,Muhamed.ul,"muhamed","voin",button,fU); fU++;
   }
 else if(state.prish==true && state.voin==true){ 
- 
+  alert("PEW PEW PEW  ");
+  ult(Voin,Prishelec.ul,"prishelec","voin",button,fU); fU++;
   }
 
-    }
 };
 //buttons for first player "Ffunc"
 
 //buttons for second player "Sfunc"
-function SclickA(button){//for event handler on button attack
+function SclickA(button){//for event handler on button attack second player
 
-if(snp>=1 || snl>=1 || nt>=1 || np>=1 || nl>=1){console.log("have chosen 1");}
-else {
-snt++;
-console.log(`nt=${snt}`);
-if(snt>1){snt=0}
-
-button.classList.toggle('buttS');
-button.classList.toggle('forbuttS');
-
-if(state.muh==true && state.prish==true){
-//setTimeout("alert('Привет')",1000);
+if(state.muh==true && state.prish==true){//chicking who playing
+  fight(Muhamed,Prishelec.at,"prishelec","muhamed",button);
   }  
 else if(state.muh==true && state.voin==true){
-
+  fight(Muhamed,Voin.at,"voin","muhamed",button);
   }
 else if(state.prish==true && state.voin==true){ 
-
+  fight(Prishelec,Voin.at,"voin","prishelec",button); 
   }
 
-    }
+    
 };
 
-function SclickH(button){//for event handler on button heal
+function SclickH(button){//for event handler on button heal second player
 
-if(snt>=1 || snl>=1 || nt>=1 || np>=1 || nl>=1){console.log("have chosen 1")}
-else{
-snp++;
- console.log(`np=${snp}`);
- if(snp>1){snp=0}
-
-button.classList.toggle('buttS');
-button.classList.toggle('forbuttS');
-
-if(state.muh==true && state.prish==true){
-
+if(state.muh==true && state.prish==true){//chicking who playing
+  heal(Prishelec,Prishelec.hp,"prishelec");
   }  
 else if(state.muh==true && state.voin==true){
-
+  heal(Voin,Voin.hp,"voin");
   }
 else if(state.prish==true && state.voin==true){ 
- 
+  heal(Prishelec,Prishelec.hp,"prishelec");
   }
 
-    }
+    
 };
 
-function SclickU(button){//for event handler on button ult
+function SclickU(button){//for event handler on button ult second player
 
-if(snt>=1 || snp>=1 || nt>=1 || np>=1 || nl>=1){console.log("have chosen 1")}
-else{  
- snl++;
- console.log(`nl=${snl}`);
- if(snl>1){snl=0}
- 
-
-button.classList.toggle('buttS');
-button.classList.toggle('forbuttS');
-
-if(state.muh==true && state.prish==true){
- 
+if(state.muh==true && state.prish==true){//chicking who playing
+  alert("PEW PEW PEW  ");
+  ult(Muhamed,Prishelec.ul,"prishelec","muhamed",button,sU);sU++;
   }  
 else if(state.muh==true && state.voin==true){
-
+  alert("SPARTA!!!");
+  ult(Muhamed,Voin.ul,"voin","muhamed",button,sU);sU++;
   }
 else if(state.prish==true && state.voin==true){ 
- 
+  alert("SPARTA!!!");
+  ult(Prishelec,Voin.ul,"voin","prishelec",button,sU); sU++;
   }
 
-    }
+    
 };
 //buttons for second player "Sfunc"
     //for buttons handlers
 
-   
+function fight(objj,at,nameF,nameS,button){ 
+objj.hp=objj.hp-at;//attack
+if(objj.hp<=0){//checking if hp below 0
+ reset();//restatr the game
+ alert(`${nameF} has won`);
+  }
+else alert(`${nameS} has hp=${objj.hp}`);
+return objj.hp;//return hp of player
+
+}
+
+function heal(objj,hp,name){
+objj.t++;
+if(objj.t<=3){//u can only use heal 3 times 
+ hp+=5;//giving player 5 hp
+ alert(`${name} hp=${hp}`)
+ return objj.hp=hp;//return hp of player
+  }
+else alert("already used 3 times");
+}
+
+function ult(objj,at,nameF,nameS,button,n){
+  console.log(n);
+if (n<1){fight(objj,at,nameF,nameS,button);}//u can use ult one time
+else alert("nope");
+}

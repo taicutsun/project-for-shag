@@ -6,13 +6,6 @@ let start=document.getElementById("4");
 let fc=document.getElementById("f");
 let sc=document.getElementById("s");
 
-//some values for func and eventlisteners
-let one=false;let a=1;
-let two=false;let b=1;
-let thre=false;let c=1;
-let state={};
-//some values for func and eventlisteners
-
 f.onclick= function(){//button 1eventlisteners
 if(b==2 && c==2){console.log('have chosen 2 ');}//check ab who u have chosen if 2 do nothing
  else{//its less then 2 picked
