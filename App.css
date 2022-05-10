@@ -1,0 +1,93 @@
+div{
+margin-left: 10px;
+}
+
+/*for App.js*/
+#main{
+    height: 375px;
+}
+
+.App{
+margin-top: 15px;
+width: 260px;  
+background-image: url('img/homeBack.jpg');
+display: inline-block;
+}
+.Butt{
+margin-right: 10px;
+display: inline-block;
+}
+img{
+height: 95px;
+width: 95px;   
+}
+.back{
+margin: 10px;
+}
+
+#bottom{
+display: flex;
+padding-top: 84%;
+justify-content:space-between
+}
+
+#mats{
+display: inline-block;
+background-image: url('img/mats.jpg');
+width: 137px;
+height:31px;
+color: aliceblue;
+padding-top: 10px;
+text-align: center;
+}
+
+#update{
+margin-left: 20px;
+display: inline-block;
+}
+/*for App.js*/
+
+/*for Fight.js*/
+.modelsFight{
+margin: 30px;margin-bottom: 0px;
+display: inline-block;
+}
+.monster{
+width: 179px;
+height:186px;
+background-image: url('img/monster.jpg');
+background-color: red;
+}
+
+.player{
+width: 105px;
+height: 231px;
+background-image: url('img/player.jpg');
+}
+
+.wrapper{
+display: inline-block;
+}
+/*for Fight.js*/
+
+/*for Farm.js*/
+.modelsFarm{
+margin-top: 30px;
+display: inline-block;
+}
+.playerFarm{
+width: 105px;
+height: 231px;
+margin-right: 10px;
+background-image: url('img/player.jpg');
+}
+
+#tree{
+width: 380px;
+height:400px;
+}
+
+#matsHP{
+margin-left: 60px;
+}
+/*for Farm.js*/
